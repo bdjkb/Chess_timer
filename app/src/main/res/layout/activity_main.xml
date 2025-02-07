@@ -1,46 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="16dp">
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/player1_timer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
         android:text="10:00"
-        android:textSize="48sp"
-        android:gravity="center" />
+        android:textSize="60dp"
+        android:textColor="@android:color/black"
+        android:background="@android:color/holo_blue_light"
+        android:padding="16dp"
+        android:rotation="180" />
 
-    <Button
-        android:id="@+id/player1_button"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Player 1"
-        android:layout_marginTop="16dp" />
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/pause_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Pause"
+            android:textSize="30sp"
+            android:background="@android:color/darker_gray"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/reset_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Reset"
+            android:textSize="30sp"
+            android:background="@android:color/holo_red_light"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/player2_timer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="10:00"
-        android:textSize="48sp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:gravity="center"
-        android:layout_marginTop="32dp" />
+        android:text="10:00"
+        android:textSize="60dp"
+        android:textColor="@android:color/black"
+        android:background="@android:color/holo_green_light"
+        android:padding="16dp" />
 
-    <Button
-        android:id="@+id/player2_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Player 2"
-        android:layout_marginTop="16dp" />
-
-    <Button
-        android:id="@+id/reset_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Reset"
-        android:layout_marginTop="32dp" />
 </LinearLayout>
